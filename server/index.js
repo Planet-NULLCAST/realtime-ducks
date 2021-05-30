@@ -15,11 +15,9 @@ app.get("/", (req, res) => {
 });
 
 const addClient = socket => {
-  console.log("New client connected", socket.id);
   clients[socket.id] = socket;
 };
 const removeClient = socket => {
-  console.log("Client disconnected", socket.id);
   delete clients[socket.id];
 };
 
